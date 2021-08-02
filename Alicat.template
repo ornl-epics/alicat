@@ -1,0 +1,552 @@
+##############################################################
+#PRESS A
+##############################################################
+
+#record(ai, "$(S):$(TA):$(DN):PressARaw") {
+#  field(DESC, "Read Pressure A")
+#  field(DTYP, "stream")
+#  field(INP, "@Alicat.proto readpressA alicat1")
+#  field(SCAN, "1 second")
+#}
+
+#record(calcout, "$(S):$(TA):$(DN):PressAQuotient") {
+#  field(INPA, "$(S):$(TA):$(DN):PressARaw CPP")
+#  field(CALC, "FLOOR(A/16)")
+#}
+
+#record(calc, "$(S):$(TA):$(DN):PressARemainder") {
+#  field(INPA, "$(S):$(TA):$(DN):PressARaw")
+#  field(INPB, "$(S):$(TA):$(DN):PressAQuotient CPP") 
+#  field(CALC, "A-16*B")
+#}
+
+#record(calcout, "$(S):$(TA):$(DN):PressA") {
+#  field(INPA, "$(S):$(TA):$(DN):PressARemainder CPP")
+#  field (INPB, "$(S):$(TA):$(DN):PressAQuotient")
+#  field(CALC, "(10^((A-8*(FLOOR(A/8)))*-1))*(B)*(1000)*(1/128)")
+#}
+
+##############################################################
+#PRESS B
+##############################################################
+
+#record(stringin, "$(S):$(TA):$(DN):PressBRaw") {
+#  field(DESC, "Read Pressure B")
+#  field(DTYP, "stream")
+#  field(INP, "@Alicat.proto readpressB alicat1")
+#  field(SCAN, "1 second")
+#}
+
+
+record(ao, "$(S):$(TA):$(DN):ASetPointWrite") {
+  field(DESC, "Write SP")
+  field(DTYP, "stream")
+  field(OUT, "@Alicat.proto setSETP(A) alicat1")
+  field(PREC, "2")
+  field(DRVH, "12.50")
+  field(DRVL, "0")
+  field(DRVH, "12.50")
+  field(DRVL, "0")
+  field(HOPR, "12.50")
+  field(LOPR, "0.0")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+}
+
+
+
+record(stringin, "$(S):$(TA):$(DN):AValuesRaw") {
+  field(DESC, "Read A Parameters")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto readRawParameters(A) alicat1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):APress") {
+  field(DESC, "Read A Press")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadPressMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIA")
+  field(ADEL, "0.1")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(HIHI, "10000")
+  field(HHSV, "MAJOR")
+  field(HIGH, "9000")
+  field(HSV, "MINOR")
+}
+
+record(ai, "$(S):$(TA):$(DN):ATemp") {
+  field(DESC, "Read A Temp")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadTempMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "C")
+  field(ADEL, "0.1")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):AVolFlow") {
+  field(DESC, "Read A Vol. Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadVolFlowMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):AMassFlow") {
+  field(DESC, "Read A Mass Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadMassFlowMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")  
+  field(EGU, "CCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):ASetPoint") {
+  field(DESC, "Read A SetPoint")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadSetPointMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")  
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(stringin, "$(S):$(TA):$(DN):AGasName") {
+  field(DESC, "Read A Gas Name")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadGasNameMF(A) alicat1")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+###############################################################
+record(ao, "$(S):$(TA):$(DN):BSetPointWrite") {
+  field(DESC, "Write SP")
+  field(DTYP, "stream")
+  field(OUT, "@Alicat.proto setSETP(B) alicat1")
+  field(PREC, "2")
+  field(DRVH, "50")
+  field(DRVL, "0")
+  field(HOPR, "50")
+  field(LOPR, "0.0")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+}
+
+
+record(stringin, "$(S):$(TA):$(DN):BValuesRaw") {
+  field(DESC, "Read B Parameters")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto readRawParameters(B) alicat1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):BPress") {
+  field(DESC, "Read B Press")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadPressMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIA")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+  field(HIHI, "10000")
+  field(HHSV, "MAJOR")
+  field(HIGH, "9000")
+  field(HSV, "MINOR")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):BTemp") {
+  field(DESC, "Read B Temp")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadTempMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):BVolFlow") {
+  field(DESC, "Read B Vol. Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadVolFlowMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):BMassFlow") {
+  field(DESC, "Read B Mass Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadMassFlowMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "CCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):BSetPoint") {
+  field(DESC, "Read B SetPoint")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadSetPointMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(stringin, "$(S):$(TA):$(DN):BGasName") {
+  field(DESC, "Read B Gas Name")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadGasNameMF(B) alicat1")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+###############################################################
+record(ao, "$(S):$(TA):$(DN):CSetPointWrite") {
+  field(DESC, "Write SP")
+  field(DTYP, "stream")
+  field(OUT, "@Alicat.proto setSETP(C) alicat1")
+  field(PREC, "2")
+  field(DRVH, "12.50")
+  field(DRVL, "0")
+  field(HOPR, "12.50")
+  field(LOPR, "0.0")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+}
+
+
+record(stringin, "$(S):$(TA):$(DN):CValuesRaw") {
+  field(DESC, "Read C Parameters")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto readRawParameters(C) alicat1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):CPress") {
+  field(DESC, "Read C Press")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadPressMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIA")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(HIHI, "10000")
+  field(HHSV, "MAJOR")
+  field(HIGH, "9000")
+  field(HSV, "MINOR")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):CTemp") {
+  field(DESC, "Read C Temp")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadTempMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):CVolFlow") {
+  field(DESC, "Read C Vol. Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadVolFlowMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):CMassFlow") {
+  field(DESC, "Read C Mass Flow")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadMassFlowMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "CCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):CSetPoint") {
+  field(DESC, "Read C SetPoint")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadSetPointMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "SCCM")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+record(stringin, "$(S):$(TA):$(DN):CGasName") {
+  field(DESC, "Read C Gas Name")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadGasNameMF(C) alicat1")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+######################################################
+#Pressure Regulators
+######################################################
+record(ao, "$(S):$(TA):$(DN):DSetPointWrite") {
+  field(DESC, "Write SP")
+  field(DTYP, "stream")
+  field(OUT, "@Alicat.proto setSETP(D) alicat1")
+  field(PREC, "2")
+  field(DRVH, "18.75")
+  field(DRVL, "0")
+  field(HOPR, "18.75")
+  field(LOPR, "0.0")
+  field(EGU, "PSIG")
+  info(archive, "Monitor, 00:00:01, VAL")
+  info(autosaveFields, "VAL")
+}
+
+record(stringin, "$(S):$(TA):$(DN):DValuesRaw") {
+  field(DESC, "Read D Parameters")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto readRawParameters(D) alicat1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):DPress") {
+  field(DESC, "Read D Pressure")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadPressPR(D) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIG")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+  field(HIHI, "10000")
+  field(HHSV, "MAJOR")
+  field(HIGH, "9000")
+  field(HSV, "MINOR")
+
+}
+
+
+record(ai, "$(S):$(TA):$(DN):DSetPoint") {
+  field(DESC, "Read D SetPoint")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadSetPointPR(D) alicat1")
+  field(SCAN, "I/O Intr")
+  field(EGU, "PSIG")
+  field(PREC, "2")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+#####################################
+record(ao, "$(S):$(TA):$(DN):ESetPointWrite") {
+  field(DESC, "Write SP")
+  field(DTYP, "stream")
+  field(OUT, "@Alicat.proto setSETP(E) alicat1")
+  field(PREC, "2")
+  field(DRVH, "18.75")
+  field(DRVL, "0")
+  field(HOPR, "18.75")
+  field(LOPR, "0.0")
+  field(EGU, "PSIG")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+  info(autosaveFields, "VAL")
+}
+
+
+record(stringin, "$(S):$(TA):$(DN):EValuesRaw") {
+  field(DESC, "Read E Parameters")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto readRawParameters(E) alicat1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(ai, "$(S):$(TA):$(DN):EPress") {
+  field(DESC, "Read E Pressure")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadPressPR(E) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIG")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+  field(HIHI, "10000")
+  field(HHSV, "MAJOR")
+  field(HIGH, "9000")
+  field(HSV, "MINOR")
+
+}
+
+
+record(ai, "$(S):$(TA):$(DN):ESetPoint") {
+  field(DESC, "Read E SetPoint")
+  field(DTYP, "stream")
+  field(INP, "@Alicat.proto ReadSetPointPR(E) alicat1")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "PSIG")
+  info(archive, "Monitor, 00:00:01, VAL")
+  field(ADEL, "0.1")
+
+}
+
+
+
+
+
+
+
+############################################
+#Alarms
+###########################################
+record(calc, "$(S):$(TA):$(DN):AlarmCalc") {
+  field(INPA, "$(S):$(TA):$(DN):APress.SEVR")
+  field(INPB, "$(S):$(TA):$(DN):BPress.SEVR")
+  field(INPC, "$(S):$(TA):$(DN):CPress.SEVR")
+  field(INPD, "$(S):$(TA):$(DN):DPress.SEVR")
+  field(INPE, "$(S):$(TA):$(DN):EPress.SEVR")
+  field(INPF, "$(S):$(TA):$(DN):AlarmEnable")
+  field(CALC, "(A>0|B>0|C>0|D>0|E>0)&F")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(bi, "$(S):$(TA):$(DN):Alarm") {
+  field(INP, "$(S):$(TA):$(DN):AlarmCalc CP") 
+  field(OSV, "MAJOR")
+}
+
+
+record(bi, "$(S):$(TA):$(DN):AlarmEnable") {
+  field(DESC, "Alarm Enabled")
+  field(ZNAM, "AlarmDisabled")
+  field(ONAM, "AlarmEnabled")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+##################################################
+#Set flows to 0 when X
+##################################################
+record(calcout, "$(S):$(TA):$(DN):AInterlock") {
+  field(INPA, "$(S):$(TA):$(DN):APress")
+  field(INPB, "$(S):$(TA):$(DN):APress.HIHI")
+  field(CALC, "A>B?0:1")
+  field(OOPT, "When Zero")  
+  field(DOPT, "Use CALC")
+  field(OUT, "$(S):$(TA):$(DN):ASetPointWrite PP")
+  field(SCAN, "2 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+record(calcout, "$(S):$(TA):$(DN):BInterlock") {
+  field(INPA, "$(S):$(TA):$(DN):BPress")
+  field(INPB, "$(S):$(TA):$(DN):BPress.HIHI")
+  field(CALC, "A>B?0:1")
+  field(OOPT, "When Zero")
+  field(DOPT, "Use CALC")
+  field(OUT, "$(S):$(TA):$(DN):BSetPointWrite PP")
+  field(SCAN, "2 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+record(calcout, "$(S):$(TA):$(DN):CInterlock") {
+  field(INPA, "$(S):$(TA):$(DN):CPress")
+  field(INPB, "$(S):$(TA):$(DN):CPress.HIHI")
+  field(CALC, "A>B?0:1")
+  field(OOPT, "When Zero")
+  field(DOPT, "Use CALC")
+  field(OUT, "$(S):$(TA):$(DN):CSetPointWrite PP")
+  field(SCAN, "2 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+record(calcout, "$(S):$(TA):$(DN):DInterlock") {
+  field(INPA, "$(S):$(TA):$(DN):DPress")
+  field(INPB, "$(S):$(TA):$(DN):DPress.HIHI")
+  field(CALC, "A>B?0:1")
+  field(OOPT, "When Zero")
+  field(DOPT, "Use CALC")
+  field(OUT, "$(S):$(TA):$(DN):DSetPointWrite PP")
+  field(SCAN, "2 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+
+
+
+record(calcout, "$(S):$(TA):$(DN):EInterlock") {
+  field(INPA, "$(S):$(TA):$(DN):EPress")
+  field(INPB, "$(S):$(TA):$(DN):EPress.HIHI")
+  field(CALC, "A>B?0:1")
+  field(OOPT, "When Zero")
+  field(DOPT, "Use CALC")
+  field(OUT, "$(S):$(TA):$(DN):ESetPointWrite PP")
+  field(SCAN, "2 second")
+  info(archive, "Monitor, 00:00:01, VAL")
+
+}
+
+

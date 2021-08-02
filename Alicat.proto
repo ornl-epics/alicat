@@ -1,0 +1,65 @@
+Terminator = CR;
+LockTimeout = 10000;
+ReplyTimeout = 1000;
+ReadTimeout = 500;
+WriteTimeout = 1000;
+ExtraInput = ignore;
+InTerminator = CR;
+
+###########################################################
+#Set SP on MF or PR
+###########################################################
+setSETP {
+   out "\$1S%f";
+}
+###########################################################
+#Read Raw data for MF Mass Flow and PR Pressure Regulators
+###########################################################
+readRawParameters{
+  out "\$1"; in "%39c"
+}
+
+############################################################
+# Mass Flow
+############################################################
+
+
+ReadPressMF{
+    in "\$1%f%*39c"
+}
+
+ReadTempMF{
+    in "\$1%*f%f%*39c"
+}
+
+ReadVolFlowMF{
+    in "\$1%*f%*f%f%*39c"
+}
+
+ReadMassFlowMF{
+    in "\$1%*f%*f%*f%f%*39c"
+}
+
+ReadSetPointMF{
+    in "\$1%*f%*f%*f%*f%f%*39c"
+}
+
+ReadGasNameMF{
+    in "\$1%*f%*f%*f%*f%*f%*6c%39c"
+}
+
+
+
+######################################
+#Press Regulators 
+######################################
+
+ReadPressPR{
+    in "\$1%f%*39c"
+}
+
+
+ReadSetPointPR{
+    in "\$1%*f%f%*39c"
+}
+

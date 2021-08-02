@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Alicat</name>
+  <height>85</height>
+  <actions>
+  </actions>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>$(MF):$(AD)SetPointWrite</pv_name>
+    <x>18</x>
+    <y>12</y>
+    <width>128</width>
+    <height>26</height>
+    <background_color>
+      <color name="WritePV_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Actual SP</text>
+    <x>156</x>
+    <y>12</y>
+    <width>76</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(MF):$(AD)SetPoint</pv_name>
+    <x>240</x>
+    <y>12</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Temp.</text>
+    <x>10</x>
+    <y>48</y>
+    <width>57</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(MF):$(AD)Temp</pv_name>
+    <x>66</x>
+    <y>48</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>GAS</text>
+    <x>492</x>
+    <y>12</y>
+    <width>48</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(MF):$(AD)GasName</pv_name>
+    <x>546</x>
+    <y>12</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Mass Flow</text>
+    <x>334</x>
+    <y>48</y>
+    <width>80</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(MF):$(AD)MassFlow</pv_name>
+    <x>413</x>
+    <y>48</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Pressure</text>
+    <x>324</x>
+    <y>12</y>
+    <width>80</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(MF):$(AD)Press</pv_name>
+    <x>413</x>
+    <y>12</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Vol. Flow</text>
+    <x>152</x>
+    <y>48</y>
+    <width>80</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(MF):$(AD)VolFlow</pv_name>
+    <x>240</x>
+    <y>48</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

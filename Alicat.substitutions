@@ -1,0 +1,7 @@
+file Alicat.template
+{
+pattern {S, TA, DN, DT1, DT2}
+        {SE, SE, Alicat, MF, PR}
+}
+
+

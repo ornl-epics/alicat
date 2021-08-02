@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>$(BL) AMI Sensors</name>
+  <width>1150</width>
+  <actions>
+  </actions>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <pv_name>$(AMI):LVL1</pv_name>
+    <width>55</width>
+    <height>271</height>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS1</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_1</name>
+    <pv_name>$(AMI):LVL2</pv_name>
+    <x>66</x>
+    <width>55</width>
+    <height>271</height>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS2</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(AMI):LocalAlarm1</pv_name>
+    <bit>0</bit>
+    <x>22</x>
+    <y>332</y>
+    <width>28</width>
+    <height>28</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS1</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(AMI):LocalAlarm2</pv_name>
+    <bit>0</bit>
+    <x>91</x>
+    <y>332</y>
+    <width>28</width>
+    <height>28</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS2</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>../cryostat/orange_cryostat_ami_three_sensor.bob</file>
+        <target>replace</target>
+        <description>AMI Details</description>
+      </action>
+    </actions>
+    <text>AMI</text>
+    <x>35</x>
+    <y>370</y>
+    <width>144</width>
+    <height>25</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_1</name>
+    <pv_name>$(AMI):LVL3</pv_name>
+    <x>132</x>
+    <width>55</width>
+    <height>271</height>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS3</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(AMI):LocalAlarm3</pv_name>
+    <bit>0</bit>
+    <x>162</x>
+    <y>332</y>
+    <width>28</width>
+    <height>28</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS3</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(AMI):NAME1</pv_name>
+    <x>4</x>
+    <y>270</y>
+    <width>63</width>
+    <height>26</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS1</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(AMI):NAME2</pv_name>
+    <x>73</x>
+    <y>270</y>
+    <width>63</width>
+    <height>26</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS2</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(AMI):NAME3</pv_name>
+    <x>144</x>
+    <y>270</y>
+    <width>63</width>
+    <height>26</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS3</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(AMI):AlarmEnable2</pv_name>
+    <x>73</x>
+    <y>300</y>
+    <width>63</width>
+    <height>31</height>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS2</pv_name>
+      </rule>
+    </rules>
+    <confirm_message></confirm_message>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(AMI):AlarmEnable3</pv_name>
+    <x>144</x>
+    <y>300</y>
+    <width>63</width>
+    <height>31</height>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS3</pv_name>
+      </rule>
+    </rules>
+    <confirm_message></confirm_message>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(AMI):AlarmEnable1</pv_name>
+    <x>4</x>
+    <y>300</y>
+    <width>63</width>
+    <height>31</height>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visible Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0==1">
+          <value>false</value>
+        </exp>
+        <pv_name>$(AMI):SDIS1</pv_name>
+      </rule>
+    </rules>
+    <confirm_message></confirm_message>
+  </widget>
+</display>

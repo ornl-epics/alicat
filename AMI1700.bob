@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>$(BL):$(TA) Liquid Level</name>
+  <width>400</width>
+  <height>550</height>
+  <actions>
+  </actions>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text_18</name>
+    <pv_name>$(BL):$(TA):$(D):LVL1</pv_name>
+    <x>91</x>
+    <y>12</y>
+    <width>77</width>
+    <height>19</height>
+    <precision>3</precision>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Nitrogen</text>
+    <x>24</x>
+    <y>13</y>
+    <width>53</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <pv_name>$(BL):$(TA):$(D):LVL1</pv_name>
+    <x>35</x>
+    <y>192</y>
+    <width>125</width>
+    <height>356</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Helium</text>
+    <x>235</x>
+    <y>13</y>
+    <width>44</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text_22</name>
+    <pv_name>$(BL):$(TA):$(D):LVL2</pv_name>
+    <x>292</x>
+    <y>12</y>
+    <width>82</width>
+    <height>19</height>
+    <precision>3</precision>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_1</name>
+    <pv_name>$(BL):$(TA):$(D):LVL2</pv_name>
+    <x>235</x>
+    <y>192</y>
+    <width>128</width>
+    <height>356</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Alarm</text>
+    <x>41</x>
+    <y>42</y>
+    <width>37</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Alarm</text>
+    <x>244</x>
+    <y>42</y>
+    <width>37</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(BL):$(TA):$(D):AlarmEnable1</pv_name>
+    <x>105</x>
+    <y>68</y>
+    <width>63</width>
+    <height>36</height>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Alarm Enable</text>
+    <x>16</x>
+    <y>77</y>
+    <width>85</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>$(BL):$(TA):$(D):AlarmEnable2</pv_name>
+    <x>306</x>
+    <y>68</y>
+    <width>68</width>
+    <height>36</height>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Alarm Enable</text>
+    <x>219</x>
+    <y>77</y>
+    <width>85</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(BL):$(TA):$(D):LocalAlarm1</pv_name>
+    <bit>0</bit>
+    <x>108</x>
+    <y>116</y>
+    <width>32</width>
+    <height>32</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(BL):$(TA):$(D):LocalAlarm2</pv_name>
+    <bit>0</bit>
+    <x>309</x>
+    <y>116</y>
+    <width>32</width>
+    <height>32</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Alarm Status</text>
+    <x>16</x>
+    <y>123</y>
+    <width>81</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Alarm Status</text>
+    <x>219</x>
+    <y>123</y>
+    <width>81</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>197</x>
+    <y>6</y>
+    <width>1</width>
+    <height>542</height>
+    <line_width>10</line_width>
+    <line_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </line_color>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="541.0">
+      </point>
+      <point x="0.0" y="541.0">
+      </point>
+      <point x="0.0" y="541.0">
+      </point>
+    </points>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>$(BL):$(TA):$(D):LVL1.LOLO</pv_name>
+    <x>90</x>
+    <y>38</y>
+    <width>80</width>
+    <height>26</height>
+    <background_color>
+      <color name="WritePV_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input_1</name>
+    <pv_name>$(BL):$(TA):$(D):LVL2.LOLO</pv_name>
+    <x>293</x>
+    <y>38</y>
+    <width>80</width>
+    <height>26</height>
+    <background_color>
+      <color name="WritePV_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>$(BL):$(TA):$(D):GlobalAlarmOK</pv_name>
+    <bit>0</bit>
+    <x>234</x>
+    <y>584</y>
+    <width>32</width>
+    <height>32</height>
+    <off_color>
+      <color name="Major" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>Global Alarm</text>
+    <x>120</x>
+    <y>591</y>
+    <width>81</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(BL):$(TA):$(D):Relay2</pv_name>
+    <x>303</x>
+    <y>156</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Relay 2</text>
+    <x>242</x>
+    <y>160</y>
+    <width>48</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(BL):$(TA):$(D):Relay1</pv_name>
+    <x>91</x>
+    <y>156</y>
+    <width>80</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Relay 1</text>
+    <x>33</x>
+    <y>160</y>
+    <width>48</width>
+    <height>16</height>
+    <vertical_alignment>1</vertical_alignment>
+    <auto_size>true</auto_size>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>
